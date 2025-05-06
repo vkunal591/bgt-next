@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f6f6;
+  --foreground: #171717;
+  --primary: #E32B6B;
+  --secondary: #939393;
+  --dark-primary: #585858;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-arsenal);
+}
+
+
+
+
+.text-primary {
+  color: var(--primary)
+}
+
+
+.text-dark-primary {
+  color: var(--dark-primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-dark-primary {
+  background-color: var(--dark-primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.border-color-primary {
+  border-color: var(--primary);
+}
+
+
+
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--color-white);
+}
+
+.button-primary:hover {
+  background-color: var(--primary);
+  opacity: 0.8;
+  color: var(--color-white);
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.button-seondary {
+  background-color: white;
+  color: var(--primary);
+}
+
+.button-seondary:hover {
+  background-color: rgba(230, 230, 230, 0.731);
+  color: var(--primary);
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+}
+
