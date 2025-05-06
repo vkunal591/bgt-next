@@ -76,13 +76,13 @@ const SectionWithCards: React.FC<SectionWithCardsProps> = ({
                         <div className={` ${cardContetntClass || "p-4 rounded-lg shadow-md bg-white"}`}>
 
                             {showSubtitle && card.subtitle && (
-                                <p className={`text-sm text-gray-500 mb-1 ${subtitleClass || ""}`}>
+                                <p className={`text-sm text-gray-800 mb-1 ${subtitleClass || ""}`}>
                                     {card.subtitle}
                                 </p>
                             )}
 
                             {showTitle && card.title && (
-                                <h3 className={`text-xl font-semibold mb-2 ${titleClass || ""}`}>
+                                <h3 className={`text-xl font-semibold mb-2 text-dark-primary ${titleClass || ""}`}>
                                     {card.title}
                                 </h3>
                             )}

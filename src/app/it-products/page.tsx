@@ -78,7 +78,7 @@ const products = [
 
 export default function page() {
     return (
-        <div>
+        <div className='bg-gray-100'>
             <HeroSection
                 title='IT Products'
                 description='BGT Ventures General Trading LLC is a distinguished distributor of cutting-edge security surveillance equipment, IT hardware, and video telematics solutions'

@@ -10,7 +10,7 @@ import InfoBannerSection from '../components/common/InfoBannerSection'
 
 export default function page() {
     return (
-        <div>
+        <div className='bg-gray-100'>
             <HeroSection
                 bgImage="/assets/images/banners/security.png"
                 alignment="left"

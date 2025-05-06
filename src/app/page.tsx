@@ -53,11 +53,11 @@ export default function Home() {
   // const { data } = getBanners('/home') // Placeholder for actual data fetching
   // console.log(data)
   return (
-    <div>
+    <div className="bg-gray-100">
       <HeroSection
         title="Unleash Innovation"
         description="Tailored software solutions for every business need."
-        bgImage="/assets/images/banners/banner1.jpg"
+        bgImage="/assets/images/banners/bannerhome.png"
         alignment="center"
         position="top-center"
         buttonText="Explore More"
@@ -217,7 +217,7 @@ export default function Home() {
           title: "Discover",
           description: "In addition to our comprehensive product distribution, BGT Ventures offers a range of professional services to support security and IT infrastructure. We provide SIRA approvals for compliance with regulatory requirements, as well as Etisalat and DU approvals for seamless telecommunications integration. Our expertise extends to structured cabling solutions, ensuring efficient and high-performance network connectivity. We also specialize in public address systems, LED video walls for dynamic visual solutions, and telephony solutions to enhance business communication.",
           buttonText: "",
-          buttonLink: "/services",
+          buttonLink: "/security-products",
           layout: "flex-col mb-8",
           descriptionClass: "text-gray-600",
           textColor: "text-gray-800",

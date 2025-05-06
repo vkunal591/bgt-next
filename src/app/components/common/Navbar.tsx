@@ -169,7 +169,7 @@ const Navbar = () => {
   const handleLinkClick = () => setActiveSubmenuId(null);
 
   return (
-    <nav className={`${!scrolled ? "bg-transparent" : "bg-white shadow"}  flex justify-between p-4 lg:px-10 lg:py-6  items-center lg:h-auto  top-0 z-[100] w-full `}>
+    <nav className={`${!scrolled ? "bg-transparent" : "bg-white shadow"} bg-white  flex justify-between p-4 lg:px-10 lg:py-6  items-center lg:h-auto  top-0 z-[100] w-full `}>
       <div>
         <Link href={"/"}>
           <Image

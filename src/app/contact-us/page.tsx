@@ -8,14 +8,15 @@ import ContactUs from '../components/ContactUs'
 import Image from 'next/image'
 import InfoBannerSection from '../components/common/InfoBannerSection'
 import ContactForm from '../components/common/ContactForm'
+import ContactHeroSection from '../components/common/ContactHeroSection'
+import OurLocation from '../components/OurLocation'
 
 
 export default function page() {
     return (
-        <div>
-
-            <ContactForm />
-
+        <div className='bg-gray-100'>
+            <ContactHeroSection />
+            <OurLocation />
 
             <InfoBannerSection
                 subtitle="You’re Being Watched,"
