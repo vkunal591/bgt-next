@@ -61,7 +61,7 @@ const Home = async () => {
         description={data?.description ?? "Tailored software solutions for every business need."}
         bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
         alignment="center"
-        position="top-center"
+        position="center"
         buttonText="Explore More"
         buttonLink={data?.link ?? "/about-us"}
       />
@@ -100,7 +100,7 @@ const Home = async () => {
         cards={[
           {
             id: 1,
-            image: "/assets/images/banners/banner1.jpg",
+            image: "/assets/images/content/pr1.png",
             subtitle: "Surveillance",
             title: "Security surveillance equipment",
             description:
@@ -112,7 +112,7 @@ const Home = async () => {
           },
           {
             id: 2,
-            image: "/assets/images/banners/banner1.jpg",
+            image: "/assets/images/content/pr3.png",
             subtitle: "Hardware",
             title: "Distribution of IT Hardware Parts",
             description:
@@ -169,7 +169,7 @@ const Home = async () => {
             title: "Security Products",
             description:
               "It is a long established fact that a reader will be distracted by the readable content.",
-            buttonText: "Learn More",
+            buttonText: "Explore More",
             buttonLink: "/security-products",
 
 
@@ -181,7 +181,7 @@ const Home = async () => {
             title: "IT Products",
             description:
               "It is a long established fact that a reader will be distracted by the readable content.",
-            buttonText: "Explore",
+            buttonText: "Explore More",
             buttonLink: "/it-products",
 
           },
@@ -191,13 +191,13 @@ const Home = async () => {
             title: "ELV Services",
             description:
               "It is a long established fact that a reader will be distracted by the readable content.",
-            buttonText: "Discover",
+            buttonText: "Explore More",
             buttonLink: "/elv-services",
 
           },
         ]}
         gridClass="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto "
         gap="gap-10"
         cardClass="p-0  bg-transparent rounded-none shadow-none"
         imageClass="rounded-none mb-0 w-full h-48 object-cover"
@@ -206,7 +206,7 @@ const Home = async () => {
         showTitle={true}
         showSubtitle={true}
         showDescription={true}
-        showButton={false}
+        showButton={true}
       />
 
 
@@ -236,7 +236,7 @@ const Home = async () => {
           title: "What’s Latest at BGT",
           align: "left",
           buttonText: "See All",
-          buttonLink: "/elv-services",
+          buttonLink: "/blogs",
           layout: "w-full",
           buttonVariant: "outline",
           buttonColor: "bg-white",

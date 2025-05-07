@@ -160,7 +160,7 @@ const page = async () => {
                 title="Let’s Create your household secure"
                 description="his book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet."
                 buttonText="Explore More"
-                buttonLink="/shop"
+                buttonLink="/security-products"
                 imageSrc="/assets/images/banners/banner5.png"
                 contentPosition="center-right"
                 subTitleClass='text-4xl text-white font-bold tracking-wide'

@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import Button from "./Button";
 import HeadingContent from "./HeadingContent";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface CardData {
     _id: string;
@@ -107,34 +108,36 @@ const SectionWithCardsSlider: React.FC<SectionWithCardsSliderProps> = ({
             >
                 {cards && cards?.data?.map((card: any) => (
                     <SwiperSlide key={card._id}>
-                        <div className={`${cardClass}`}>
-                            {showImage && card.fileUrl && (
-                                <Image
-                                    width={900}
-                                    height={900}
-                                    src={card.fileUrl}
-                                    alt={card.title || "Card Image"}
-                                    className={`${imageClass || "w-full h-48 object-cover rounded-md mb-4"}`}
-                                />
-                            )}
-
-                            <div className={`${cardContetntClass}`}>
-
-                                {showTitle && card.title && (
-                                    <h3 className={`text-xl line-clamp-2 text-gray-800 font-semibold mb-2 ${titleClass}`}>
-                                        {card.title}
-                                    </h3>
+                        <Link href={`/blogs/${card?.slug}`} >
+                            <div className={`${cardClass}`}>
+                                {showImage && card.fileUrl && (
+                                    <Image
+                                        width={900}
+                                        height={900}
+                                        src={card.fileUrl}
+                                        alt={card.title || "Card Image"}
+                                        className={`${imageClass || "w-full h-48 object-cover rounded-md mb-4"}`}
+                                    />
                                 )}
 
-                                {showDescription && card.heading && (
-                                    <p className={`text-gray-700 mb-4 line-clamp-3 ${descriptionClass}`}>
-                                        {card.heading}
-                                    </p>
-                                )}
+                                <div className={`${cardContetntClass}`}>
+
+                                    {showTitle && card.title && (
+                                        <h3 className={`text-xl line-clamp-2 text-gray-800 font-semibold mb-2 ${titleClass}`}>
+                                            {card.title}
+                                        </h3>
+                                    )}
+
+                                    {showDescription && card.heading && (
+                                        <p className={`text-gray-700 mb-4 line-clamp-3 ${descriptionClass}`}>
+                                            {card.heading}
+                                        </p>
+                                    )}
 
 
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -14,7 +14,7 @@ const ContactUs: React.FC<ContactUsProps> = ({
             <div className='grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8'>
                 <div className='col-span-1 md:col-span-2'>
                     <h2 className='text-4xl text-primary mb-4 font-semibold'>Contact Us</h2>
-                    <p className='mt-2 font-normal font-[ubuntu] text-dark-primary'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+                    <p className='mt-2 font-normal font-[ubuntu] text-dark-primary'>BGT Ventures General Trading LLC is a distinguished distributor of cutting-edge security surveillance equipment, IT hardware, and video telematics solutions, catering to Dubai and the broader MENA region. Since our inception in 2011, we have been committed to supplying premium-quality products that enhance security, optimize efficiency, and elevate operational performance for businesses and high-security sectors. Our deep industry expertise and unwavering commitment to technological innovation position us as a trusted partner for resellers, integrators, and enterprises seeking state-of-the-art security and IT solutions.</p>
                     <div className='flex flex-col md:flex-row gap-4 mt-8'>
                         <Button
                             variant="outline"
@@ -27,10 +27,10 @@ const ContactUs: React.FC<ContactUsProps> = ({
                         <Button
                             variant="outline"
                             showArrow
-                            href={"mailto:"}
+                            href={"mailto:admin@bgtgulf.com"}
                             className={``}
                         >
-                          Send us an email
+                            Send us an email
                         </Button>
                     </div>
                 </div>

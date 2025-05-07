@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div
         className={`absolute inset-0 z-20 w-full px-6 py-10 flex flex-col gap-4 ${positionClasses[position]} ${textAlignmentClasses[alignment]}`}
       >
-        <div className="m-16 lg:w-1/2">
+        <div className="lg:m-16 lg:w-1/2">
           {title && (
             <h1 className={`text-4xl md:text-5xl font-bold ${titleColor} drop-shadow-lg mb-2`}>
               {title}

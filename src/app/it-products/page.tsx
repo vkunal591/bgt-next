@@ -120,7 +120,7 @@ const page = async () => {
                 title="IP Camera Active"
                 description="Real-time video feed is recorded and stored securely."
                 buttonText="Explore More"
-                buttonLink="/shop"
+                buttonLink="/security-products"
                 imageSrc="/assets/images/banners/banner5.png"
                 contentPosition="center-right"
                 subTitleClass='text-4xl text-white font-bold tracking-wide'

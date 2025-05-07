@@ -46,7 +46,7 @@ export default function ProductFilter() {
         <div className='max-w-7xl m-auto p-4 lg:p-16'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
                 {/* Category List */}
-                <div className='space-y-2 border border-gray-200'>
+                <div className='space-y-2 border border-gray-200 rounded overflow-hidden'>
                     <button
                         className={`block w-full text-2xl font-semibold text-center text-primary px-4 py-2 rounded ${selectedCategory === null ? 'bg-white text-primary' : 'bg-gray-100'}`}
                         onClick={() => setSelectedCategory(null)}

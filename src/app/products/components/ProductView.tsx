@@ -105,7 +105,7 @@ const ProductView: React.FC<ProductViewProps> = ({ product, loading = false }) =
           <>
             <h2 className='text-3xl text-primary font-semibold mb-4'>{product?.name}</h2>
             <p className='text-gray-600 font-[ubuntu] font-normal mb-8'>{product?.description}</p>
-            <Button className='px-10 font-thin'>Inquire →</Button>
+            <Button className='px-10 font-thin' href='/contact-us' >Inquire →</Button>
           </>
         )}
       </div>

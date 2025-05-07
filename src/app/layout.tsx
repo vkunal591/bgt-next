@@ -19,8 +19,8 @@ const arsenal = Arsenal({
 });
 
 export const metadata: Metadata = {
-  title: "BGT",
-  description: "",
+  title: "BGT VENTURES GENERAL TRADING LLC",
+  description: "BGT VENTURES GENERAL TRADING LLC",
 };
 
 export default function RootLayout({

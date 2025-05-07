@@ -4,6 +4,7 @@ import Link from "next/link";
 import Accordion from "./FooterAccordion";
 import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import { IoMailOutline, IoCallOutline, IoLocationOutline, IoArrowUp } from "react-icons/io5";
+import GoToTopButton from "./GoToTopButton";
 
 
 export default function Footer() {
@@ -47,9 +48,7 @@ export default function Footer() {
             className="h-12"
           />
         </div>
-        <div>
-          <Link href={"#"} className="bg-primary text-white inline-block p-4 rounded-lg"><IoArrowUp /></Link>
-        </div>
+       <GoToTopButton />
       </div>
       <hr className="m-0 border-gray-500" />
       <div className="container mx-auto py-10 px-4 lg:px-10">

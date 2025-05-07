@@ -16,8 +16,8 @@ const page = async () => {
                 title={data?.title ?? "Unleash Innovation"}
                 description={data?.description ?? "Tailored software solutions for every business need."}
                 bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
-                alignment="left"
-                position="center-left"
+                alignment="center"
+                position="center"
 
             />
 
@@ -60,7 +60,7 @@ const page = async () => {
             <div className='bg-gray-900'>
                 <div className='max-w-7xl m-auto p-4 lg:p-16 flex flex-col md:flex-row gap-4 items-center justify-between'>
                     <div className='text-gray-50 w-full lg:w-3/4'>
-                        <h3 className="text-3xl font-semibold mb-4 text-primary w-full lg:w-1/2" >From Door And Window Sensors To Mobile Apps And Cameras System!</h3>
+                        <h3 className="text-3xl font-semibold mb-4 text-primary w-full lg:w-2/3" >From Door And Window Sensors To Mobile Apps And Cameras System!</h3>
                         <p className='font-normal font-[ubuntu]'>
                             Helping families live intelligently means we’re always working to bring our customers the latest technology. As one of the premier providers of smart home technology, we are recognized throughout the industry for our products, innovation & customer satisfaction.
                         </p>

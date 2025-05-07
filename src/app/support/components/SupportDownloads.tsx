@@ -57,7 +57,7 @@ const DownloadCard = ({ item }: { item: DownloadItem }) => (
     <div className="flex items-center gap-3">
       {item.icon}
     </div>
-    <h3 className="text-lg font-semibold">{item.title}</h3>
+    <h3 className="text-lg text-gray-800 font-semibold">{item.title}</h3>
     <p className="text-sm text-center text-gray-600">{item.description}</p>
     <a
       href={item.link}

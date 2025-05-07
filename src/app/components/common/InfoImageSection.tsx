@@ -47,7 +47,7 @@ const InfoImageSection: React.FC<InfoImageSectionProps> = ({
                     <p className="text-sm font-medium uppercase tracking-wide">{subtitle}</p>
                     <h2 className={`text-3xl md:text-4xl font-bold ${titleColor}`}>{title}</h2>
                     <p className="text-base md:text-lg">{description}</p>
-                    {buttonText && <Button variant="outline" showArrow href="/about">{buttonText}</Button>}
+                    {buttonText && <Button variant="outline" showArrow href={buttonLink}>{buttonText}</Button>}
 
                 </div>
 

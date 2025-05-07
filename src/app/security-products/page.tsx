@@ -19,8 +19,8 @@ const page = async () => {
                 title={data?.title ?? "Unleash Innovation"}
                 description={data?.description ?? "Tailored software solutions for every business need."}
                 bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
-                alignment="left"
-                position="center-left"
+                alignment="center"
+                position="center"
             />
 
 
@@ -43,7 +43,7 @@ const page = async () => {
                 title="Product Overview"
                 description="BGT Ventures specializes in distributing an extensive range of professional security and IT products. Our portfolio encompasses advanced security surveillance solutions, including IP CCTV cameras, Thermal Cameras, ANPR Cameras, alongside biometric and RFID-based access control systems. We offer cutting-edge vehicle security and video telematics solutions, integrating AI-powered monitoring for enhanced fleet safety. Additionally, we supply gate barrier systems, public address solutions, and structured cabling products, ensuring seamless security and IT networking infrastructure. Our selection also includes a broad array of IT hardware, networking equipment, and software solutions tailored to meet the evolving needs of diverse industries."
                 imageSrc="/assets/images/content/cameraproduct.png"
-                imageClass='shadow'
+                imageClass=''
                 layout="flex-col-reverse md:flex-row"
                 bgColor="bg-transparent"
                 textColor="text-dark-primary"
@@ -54,7 +54,7 @@ const page = async () => {
                 title="IP Camera Active"
                 description="Real-time video feed is recorded and stored securely."
                 buttonText="Explore More"
-                buttonLink="/shop"
+                buttonLink="/security-products"
                 imageSrc="/assets/images/banners/banner5.png"
                 contentPosition="center-right"
                 subTitleClass='text-4xl text-white font-bold tracking-wide'
