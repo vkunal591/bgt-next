@@ -8,6 +8,7 @@ import ContactUs from '../components/ContactUs'
 import Image from 'next/image'
 import InfoBannerSection from '../components/common/InfoBannerSection'
 import ProductFilter from './components/ProductFilter'
+import { getBanners } from '@/utils/server'
 
 const products = [
     {
@@ -75,14 +76,14 @@ const products = [
     },
 
 ]
-
-export default function page() {
+const page = async () => {
+    const { data } = await getBanners('/it-products') // Placeholder for actual data fetching
     return (
         <div className='bg-gray-100'>
             <HeroSection
-                title='IT Products'
-                description='BGT Ventures General Trading LLC is a distinguished distributor of cutting-edge security surveillance equipment, IT hardware, and video telematics solutions'
-                bgImage="/assets/images/banners/itbanner.jpg"
+                title={data?.title ?? "Unleash Innovation"}
+                description={data?.description ?? "Tailored software solutions for every business need."}
+                bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
                 titleColor='text-primary !text-6xl'
                 alignment="center"
                 position="center"
@@ -99,10 +100,7 @@ export default function page() {
                 textColor="text-dark-primary"
             />
 
-            <ProductFilter
-                categories={['Electronics', 'Clothing', 'Books']}
-                products={products}
-            />
+            <ProductFilter />
 
 
 
@@ -135,6 +133,7 @@ export default function page() {
                 className='mb-20 h-full min-h-[500px] bg-transparent !py-0'
             />
             <Faqs
+                pageUrl='/it-products'
                 sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
                 headingProps={{
                     title: "We are trusted By",
@@ -172,4 +171,7 @@ export default function page() {
         </div>
     );
 }
+
+
+export default page;
 

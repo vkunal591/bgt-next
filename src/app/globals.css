@@ -89,3 +89,12 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+/* Hide scrollbar for Webkit (Chrome, Safari) */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hidden {
+  scrollbar-width: none;
+}

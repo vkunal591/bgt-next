@@ -6,125 +6,7 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 
-const services = [
-  {
-    name: "Web Development",
-    image: "/assets/images/webdev.png",
-    path: "/services/web-development",
-    id: "web-development", // Unique ID for submenu
-  },
-  {
-    name: "App Development",
-    image: "/assets/images/appdev.png",
-    path: "/services/app-development",
-    id: "app-development", // Unique ID for submenu
-  },
-  {
-    name: "Artificial Intelligence",
-    image: "/assets/images/ai.png",
-    path: "/services/artificial-intelligence",
-    id: "ai", // Unique ID for submenu
-  },
-  {
-    name: "Saas Development",
-    image: "/assets/images/saas.png",
-    path: "/services/saas-development",
-    id: "saas", // Unique ID for submenu
-  },
-  {
-    name: "Blockchain Development",
-    image: "/assets/images/block.png",
-    path: "/services/blockchain-development",
-    id: "blockchain", // Unique ID for submenu
-  },
-  {
-    name: "CRM Development",
-    image: "/assets/images/crm.png",
-    path: "/services/crm-development",
-    id: "crm", // Unique ID for submenu
-  },
-  {
-    name: "UX/UI Designing",
-    image: "/assets/images/ux.png",
-    path: "/services/ux-ui-designing",
-    id: "ux-ui", // Unique ID for submenu
-  },
-  {
-    name: "Digital Marketing",
-    image: "/assets/images/webdev.png",
-    path: "/services/digital-marketing",
-    id: "digital-marketing", // Unique ID for submenu
-  },
-  {
-    name: "API Development",
-    image: "/assets/images/api.png",
-    path: "/services/api-development",
-    id: "api", // Unique ID for submenu
-  },
-];
 
-const industries = [
-  {
-    id: "health-care", // Added id
-    name: "Health Care",
-    image: "/assets/images/serve1.png",
-    path: "/industries/health-care",
-  },
-  {
-    id: "oil-gas-energy", // Added id
-    name: "Oil & Gas Energy",
-    image: "/assets/images/serve2.png",
-    path: "/industries/oil-gas-energy",
-  },
-  {
-    id: "retails-e-commerce", // Added id
-    name: "Retails & E-Commerce",
-    image: "/assets/images/serve3.png",
-    path: "/industries/retails-e-commerce",
-  },
-  {
-    id: "real-estate-construction", // Added id
-    name: "Real Estate & Construction",
-    image: "/assets/images/serve4.png",
-    path: "/industries/real-estate-construction",
-  },
-  {
-    id: "finance-banking", // Added id
-    name: "Finance & Banking",
-    image: "/assets/images/serve5.png",
-    path: "/industries/finance-banking",
-  },
-  {
-    id: "government-smart-cities", // Added id
-    name: "Goverment & Smart Cities",
-    image: "/assets/images/serve6.png",
-    path: "/industries/government-smart-cities",
-  },
-  {
-    id: "education-service", // Added id
-    name: "Education Service",
-    image: "/assets/images/serve7.png",
-    path: "/industries/education-service",
-  },
-  // {
-  //   id: "logistic-transportation", // Added id
-  //   name: "Logistic & Transportation",
-  //   image: "/assets/images/serve8.png",
-  //   path: "/industries/logistic-transportation",
-  // },
-  // {
-  //   id: "hospitality-tourism", // Added id
-  //   name: "Hospitality & Tourism",
-  //   image: "/assets/images/serve9.png",
-  //   path: "/industries/hospitality-tourism",
-  // },
-  // {
-  //   id: "legal-compliance", // Added id
-  //   name: "Legal & Compliance",
-  //   image: "/assets/images/serve10.png",
-  //   path: "/industries/legal-compliance",
-  // },
-];
 
 const Navbar = () => {
   const pathname = usePathname(); // Get current route
@@ -169,7 +51,8 @@ const Navbar = () => {
   const handleLinkClick = () => setActiveSubmenuId(null);
 
   return (
-    <nav className={`${!scrolled ? "bg-transparent" : "bg-white shadow"} bg-white  flex justify-between p-4 lg:px-10 lg:py-6  items-center lg:h-auto  top-0 z-[100] w-full `}>
+    <nav className={` bg-white shadow border-b  flex justify-between p-4 lg:px-10 lg:py-6  items-center lg:h-auto  top-0 z-[100] w-full `}>
+    {/* ${!scrolled ? "bg-transparent" : "bg-white shadow"} */}
       <div>
         <Link href={"/"}>
           <Image

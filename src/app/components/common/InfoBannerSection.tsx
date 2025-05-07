@@ -45,7 +45,7 @@ const InfoBannerSection: React.FC<InfoBannerSectionProps> = ({
     contentClass = 'max-w-xl space-y-4 mx-20',
     titleColor = 'text-primary',
     subTitleClass = 'text-sm font-medium uppercase tracking-wide',
-    textColor = 'text-black',
+    textColor = 'text-gray-100',
     buttonColor = 'bg-primary',
     buttonTextColor = 'text-white',
     className = '',
@@ -69,8 +69,8 @@ const InfoBannerSection: React.FC<InfoBannerSectionProps> = ({
                 <div className={`${contentClass}`}>
                     <div>
                         <p className={`text-gray-800 ${subTitleClass || "text-sm font-medium uppercase tracking-wide"} `}>{subtitle}</p>
-                        <h2 className={`text-3xl md:text-4xl font-bold text-dark-primary ${titleColor}`}>{title}</h2>
-                        <p className="text-base md:text-lg text-gray-500">{description}</p>
+                        <h2 className={`text-3xl md:text-4xl font-bold text-gray-100 ${titleColor}`}>{title}</h2>
+                        <p className="text-base md:text-lg text-gray-100">{description}</p>
                     </div>
                     <Button
                         variant="outline"

@@ -9,9 +9,8 @@ import { IoMailOutline, IoCallOutline, IoLocationOutline, IoArrowUp } from "reac
 export default function Footer() {
 
   const company = [
-    { name: "About", url: "/about-us" },
-    { name: "blog", url: "/blog" },
-    { name: "careers", url: "/careers" },
+    { name: "About us", url: "/about-us" },
+    { name: "Support", url: "/support" },
     { name: "Contact Us", url: "/contact-us" },
     // { name: "Careers", url: "/careers" },
     // { name: "Culture", url: "/culture" },
@@ -19,9 +18,9 @@ export default function Footer() {
   ];
 
   const services = [
-    { name: "Security Servilliance", url: "/security-servilliance" },
-    { name: "IT Hardware", url: "/it-hardware" },
-    { name: "Video Telematics", url: "/video-telematics" },
+    { name: "Security Servilliance", url: "/security-products" },
+    { name: "IT Products", url: "/it-products" },
+    { name: "ELV Services", url: "/elv-services" },
   ]
 
 
@@ -129,29 +128,41 @@ export default function Footer() {
             </h3>
             <div>
               <Link
-                href={"mailto:allabove@company.com"}
+                href={"mailto:admin@bgtgulf.com"}
                 className="text-sm mb-2 flex items-center"
               >
                 <strong>
                   <IoMailOutline className="text-xl mr-2" />
                 </strong>{" "}
-                info@BGT.co.in
+                admin@bgtgulf.com
               </Link>
               <Link
-                href={"tel:+91"}
+                href={"tel:+97143266940"}
                 className="text-sm mb-2 flex items-center"
               >
                 <strong>
                   <IoCallOutline className="text-xl mr-2" />
                 </strong>{" "}
-                +91 378 3398 3432
+                +971 4 3266940
+              </Link>
+              <Link
+                href={"tel:+971553472035"}
+                className="text-sm mb-2 flex items-center"
+              >
+                <strong>
+                  <IoCallOutline className="text-xl mr-2" />
+                </strong>{" "}
+                +971553472035
               </Link>
               <p className="text-sm flex items-center mb-4">
                 <strong>
                   <IoLocationOutline className="text-xl mr-2" />
                 </strong>{" "}
-                9 Laxmi Garden, 2nd floor above ICICI bank, Shivaji marg, New
-                Delhi(110015)
+                Office - 504,
+                Al Tayer Commercial Building
+                49, Al Mina Road, PO Box: 118199
+                Dubai – United Arab Emirates
+
               </p>
 
             </div>
@@ -165,14 +176,14 @@ export default function Footer() {
         </div>
         <div className="flex space-x-4 text-base mt-2 md:mt-0">
           <Link
-            href="/terms-and-conditions"
+            href="/"
             className="text-gray-50 hover:underline"
           >
             Terms & Conditions
           </Link>
           <span className="hidden md:block">|</span>
           <Link
-            href="/privacy-policy"
+            href="/"
             className="text-gray-50 hover:underline"
           >
             Privacy Policy

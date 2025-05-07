@@ -9,6 +9,7 @@ import Image from 'next/image'
 import InfoBannerSection from '../components/common/InfoBannerSection'
 import SupportDownloads from './components/SupportDownloads'
 import ContactForm from '../components/common/ContactForm'
+import { getBanners } from '@/utils/server'
 
 
 const products = [
@@ -77,14 +78,14 @@ const products = [
     },
 
 ]
-
-export default function page() {
+const page = async () => {
+    const { data } = await getBanners('/support') // Placeholder for actual data fetching
     return (
         <div className='bg-gray-100'>
             <HeroSection
-                title='Support'
-                description='BGT Ventures General Trading LLC is a distinguished distributor of cutting-edge security surveillance equipment, IT hardware, and video telematics solutions'
-                bgImage="/assets/images/banners/support.jpg"
+                title={data?.title ?? "Unleash Innovation"}
+                description={data?.description ?? "Tailored software solutions for every business need."}
+                bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
                 titleColor='text-primary !text-6xl'
                 alignment="center"
                 position="center"
@@ -108,6 +109,7 @@ export default function page() {
 
 
             <Faqs
+                pageUrl='/support'
                 sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
                 headingProps={{
                     title: "We are trusted By",
@@ -146,3 +148,4 @@ export default function page() {
     );
 }
 
+export default page;

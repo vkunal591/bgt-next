@@ -82,15 +82,23 @@ export default function ContactForm() {
                         <div className='space-y-4'>
                             <div className='flex items-center gap-3'>
                                 <span><IoMailOpenOutline /></span>
-                                <p>email@example.com</p>
+                                <Link href={"tel:admin@bgtgulf.com"}>admin@bgtgulf.com</Link>
                             </div>
                             <div className='flex items-center gap-3'>
                                 <span><IoCallOutline /> </span>
-                                <p>+1 234 567 890</p>
+                                <Link href={"tel:+97143266940"}>+97143266940</Link>
+                            </div>
+                            <div className='flex items-center gap-3'>
+                                <span><IoCallOutline /> </span>
+                                <Link href={"tel:+971553472035"}>+971553472035</Link>
                             </div>
                             <div className='flex items-center gap-3'>
                                 <span><IoLocationOutline /></span>
-                                <p>123 Street Name, City</p>
+                                <p>Office - 504,
+                                    Al Tayer Commercial Building
+                                    49, Al Mina Road, PO Box: 118199
+                                    Dubai – United Arab Emirates
+                                </p>
                             </div>
                         </div>
                         <div className='flex gap-4 text-xl'>

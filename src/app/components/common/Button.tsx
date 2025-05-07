@@ -37,7 +37,6 @@ const Button: React.FC<ButtonProps> = ({
       {showArrow && <span className="ml-2">→</span>}
     </>
   );
-  console.log(variant,children,href,onClick,className,type,showArrow,variantClasses,baseClasses)
 
   if (href) {
     return (

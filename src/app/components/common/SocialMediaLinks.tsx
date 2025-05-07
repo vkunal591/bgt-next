@@ -10,21 +10,21 @@ import {
 const SocialMediaLinks = ({ size }: { size?: number }) => {
   const socialLinks = [
     {
-      href: "https://www.instagram.com/aboveallagency1/",
+      href: "https://www.instagram.com/",
       icon: (
         <FaInstagram
           size={size ?? 20}
-          className="text-white hover:text-primary"
+          className="text-primary hover:text-primary"
         />
       ),
       label: "Instagram",
     },
     {
-      href: "https://www.facebook.com/people/aboveallagency/61560059016993/",
+      href: "https://www.facebook.com/people/",
       icon: (
         <FaFacebook
           size={size ?? 20}
-          className="text-white hover:text-primary"
+          className="text-primary hover:text-primary"
         />
       ),
       label: "Facebook",
@@ -34,31 +34,31 @@ const SocialMediaLinks = ({ size }: { size?: number }) => {
     //   icon: (
     //     <FaTwitter
     //       size={size ?? 20}
-    //       className="text-white hover:text-primary"
+    //       className="text-primary hover:text-primary"
     //     />
     //   ),
     //   label: "Twitter",
     // },
-    {
-      href: "https://www.linkedin.com/company/aboveallagency/?viewAsMember=true",
-      icon: (
-        <FaLinkedinIn
-          size={size ?? 20}
-          className="text-white hover:text-primary"
-        />
-      ),
-      label: "LinkedIn",
-    },
-    {
-      href: "https://in.pinterest.com/aboveallagency/",
-      icon: (
-        <FaPinterest
-          size={size ?? 20}
-          className="text-white hover:text-primary"
-        />
-      ),
-      label: "Pinterest",
-    },
+    // {
+    //   href: "https://www.linkedin.com/company/",
+    //   icon: (
+    //     <FaLinkedinIn
+    //       size={size ?? 20}
+    //       className="text-primary hover:text-primary"
+    //     />
+    //   ),
+    //   label: "LinkedIn",
+    // },
+    // {
+    //   href: "https://in.pinterest.com/",
+    //   icon: (
+    //     <FaPinterest
+    //       size={size ?? 20}
+    //       className="text-primary hover:text-primary"
+    //     />
+    //   ),
+    //   label: "Pinterest",
+    // },
   ];
 
   return (
@@ -71,6 +71,7 @@ const SocialMediaLinks = ({ size }: { size?: number }) => {
           key={social.label}
           href={social.href}
           passHref
+          className="text-primary"
         >
           {social.icon}
         </Link>

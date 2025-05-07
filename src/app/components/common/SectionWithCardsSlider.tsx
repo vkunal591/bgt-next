@@ -8,20 +8,23 @@ import "swiper/css/pagination";
 
 import Button from "./Button";
 import HeadingContent from "./HeadingContent";
+import Image from "next/image";
 
-interface CardData {
-    id: string | number;
-    image?: string;
-    subtitle?: string;
-    title?: string;
-    description?: string;
-    buttonText?: string;
-    buttonLink?: string;
+export interface CardData {
+    _id: string;
+    title: string;
+    heading: string;
+    content: string;
+    fileUrl: string;
+    authorName: string;
+    status: 'active' | 'inactive' | string;
+    slug: string;
+    summary: string;
 }
 
 interface SectionWithCardsSliderProps {
     headingProps: React.ComponentProps<typeof HeadingContent>;
-    cards: CardData[];
+    cards: any;
     sectionPadding?: string;
     cardClass?: string;
     cardContetntClass?: string;
@@ -66,7 +69,7 @@ const SectionWithCardsSlider: React.FC<SectionWithCardsSliderProps> = ({
 }) => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
-
+    console.log(cards)
     useEffect(() => {
         // Swiper needs DOM to be rendered before using navigation refs
     }, []);
@@ -102,41 +105,34 @@ const SectionWithCardsSlider: React.FC<SectionWithCardsSliderProps> = ({
                 pagination={{ clickable: true }}
                 className="mt-4"
             >
-                {cards.map((card) => (
-                    <SwiperSlide key={card.id}>
+                {cards && cards?.data?.map((card: any) => (
+                    <SwiperSlide key={card._id}>
                         <div className={`${cardClass}`}>
-                            {showImage && card.image && (
-                                <img
-                                    src={card.image}
+                            {showImage && card.fileUrl && (
+                                <Image
+                                    width={900}
+                                    height={900}
+                                    src={card.fileUrl}
                                     alt={card.title || "Card Image"}
                                     className={`${imageClass || "w-full h-48 object-cover rounded-md mb-4"}`}
                                 />
                             )}
 
                             <div className={`${cardContetntClass}`}>
-                                {showSubtitle && card.subtitle && (
-                                    <p className={`text-sm text-gray-500 mb-1 ${subtitleClass}`}>
-                                        {card.subtitle}
-                                    </p>
-                                )}
 
                                 {showTitle && card.title && (
-                                    <h3 className={`text-xl font-semibold mb-2 ${titleClass}`}>
+                                    <h3 className={`text-xl line-clamp-2 text-gray-800 font-semibold mb-2 ${titleClass}`}>
                                         {card.title}
                                     </h3>
                                 )}
 
-                                {showDescription && card.description && (
-                                    <p className={`text-gray-700 mb-4 ${descriptionClass}`}>
-                                        {card.description}
+                                {showDescription && card.heading && (
+                                    <p className={`text-gray-700 mb-4 line-clamp-3 ${descriptionClass}`}>
+                                        {card.heading}
                                     </p>
                                 )}
 
-                                {showButton && card.buttonText && card.buttonLink && (
-                                    <Button href={card.buttonLink} className={buttonClass}>
-                                        {card.buttonText}
-                                    </Button>
-                                )}
+
                             </div>
                         </div>
                     </SwiperSlide>

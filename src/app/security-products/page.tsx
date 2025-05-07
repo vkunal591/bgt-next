@@ -7,12 +7,18 @@ import TrustedPartners from '../components/common/TruestedPartners'
 import ContactUs from '../components/ContactUs'
 import Image from 'next/image'
 import InfoBannerSection from '../components/common/InfoBannerSection'
+import { getBanners, getData } from '@/utils/server'
+import ProductGrid from './components/ProductGrid'
 
-export default function page() {
+const page = async () => {
+    const { data } = await getBanners('/security-products') // Placeholder for actual data fetching
+
     return (
         <div className='bg-gray-100'>
             <HeroSection
-                bgImage="/assets/images/banners/security.png"
+                title={data?.title ?? "Unleash Innovation"}
+                description={data?.description ?? "Tailored software solutions for every business need."}
+                bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
                 alignment="left"
                 position="center-left"
             />
@@ -29,60 +35,8 @@ export default function page() {
             />
 
 
-            <div className='max-w-7xl m-auto p-4 lg:p-16'>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 '>
-                    {
-                        [
-                            {
-                                name: "IP Cameras",
-                                image: "/assets/images/content/pr1.png"
-                            },
-                            {
-                                name: "Product 1",
-                                image: "/assets/images/content/pr2.png"
-                            }, {
-                                name: "Product 1",
-                                image: "/assets/images/content/pr3.png"
-                            },
-                            {
-                                name: "Product 1",
-                                image: "/assets/images/content/pr4.png"
-                            },
-                            {
-                                name: "Product 1",
-                                image: "/assets/images/content/pr6.png"
-                            },
-                            {
-                                name: "Product 1",
-                                image: "/assets/images/content/pr7.png"
-                            },
-                            {
-                                name: "Network Video Recorder",
-                                image: "/assets/images/content/pr8.png"
-                            }, {
-                                name: "Product 1",
-                                image: "/assets/images/content/pr9.png"
-                            }
-                        ].map((product, index) => (
-                            <div className='' key={index}>
-                                <div>
-                                    <Image
-                                        src={product?.image || "/assets/images/contnet/pr1.png"}
-                                        width={900}
-                                        height={900}
-                                        alt={product?.name || "BGT Product"}
-                                        className=''
-                                    />
-                                </div>
-                                <h3 className='text-xl font-semibold p-2  text-center'>
-                                    {product?.name || "BGT Product"}
-                                </h3>
-                            </div>
-                        ))
-                    }
+            <ProductGrid slug={"Security Products"} />
 
-                </div>
-            </div>
 
             <InfoImageSection
                 subtitle=""
@@ -113,6 +67,7 @@ export default function page() {
                 className='mb-20 h-full min-h-[500px] bg-transparent !py-0'
             />
             <Faqs
+                pageUrl='security-products'
                 sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
                 headingProps={{
                     title: "We are trusted By",
@@ -150,4 +105,7 @@ export default function page() {
         </div>
     );
 }
+
+
+export default page;
 

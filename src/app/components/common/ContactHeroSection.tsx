@@ -1,4 +1,5 @@
 "use client"
+import { Post } from '@/utils/api';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { BsTwitterX } from 'react-icons/bs';
@@ -9,12 +10,9 @@ import { IoCall, IoCallOutline, IoLocateOutline, IoLocationOutline, IoMailOpenOu
 
 export default function ContactHeroSection() {
     const [formData, setFormData] = useState({
-        serviceType: '',
-        service: '',
-        name: '',
+        username: '',
         email: '',
         message: '',
-        file: null,
     });
     const [errors, setErrors] = useState<any>({});
     const [loading, setLoading] = useState(false);
@@ -22,18 +20,12 @@ export default function ContactHeroSection() {
 
     const handleChange = (e: any) => {
         const { name, value, type, files } = e.target;
-        if (type === 'file') {
-            setFormData({ ...formData, file: files[0] });
-        } else {
-            setFormData({ ...formData, [name]: value });
-        }
+        setFormData({ ...formData, [name]: value });
     };
 
     const validate = () => {
         const newErrors: any = {};
-        if (!formData.serviceType) newErrors.serviceType = 'Select a service type';
-        if (!formData.service) newErrors.service = 'Select a service';
-        if (!formData.name) newErrors.name = 'Name is required';
+        if (!formData.username) newErrors.name = 'Name is required';
         if (!formData.email) newErrors.email = 'Email is required';
         if (!formData.message) newErrors.message = 'Message is required';
         setErrors(newErrors);
@@ -48,16 +40,15 @@ export default function ContactHeroSection() {
         setSuccess('');
         try {
             // Simulate sending data (API call)
-            await new Promise((res) => setTimeout(res, 2000));
-            setSuccess('Message sent successfully!');
-            setFormData({
-                serviceType: '',
-                service: '',
-                name: '',
-                email: '',
-                message: '',
-                file: null,
-            });
+            const res: any = await Post("/api/contact", formData, 5000)
+            if (res?.success) {
+                setSuccess('Message sent successfully!');
+                setFormData({
+                    username: '',
+                    email: '',
+                    message: '',
+                });
+            }
         } catch (err) {
             console.error(err);
             setSuccess('Something went wrong. Please try again.');
@@ -83,11 +74,15 @@ export default function ContactHeroSection() {
                         <div className='space-y-4 mb-16'>
                             <div className='flex items-center gap-3'>
                                 <span><IoMailOpenOutline /></span>
-                                <p>email@example.com</p>
+                                <Link href={"tel:admin@bgtgulf.com"}>admin@bgtgulf.com</Link>
                             </div>
                             <div className='flex items-center gap-3'>
                                 <span><IoCallOutline /> </span>
-                                <p>+1 234 567 890</p>
+                                <Link href={"tel:+97143266940"}>+97143266940</Link>
+                            </div>
+                            <div className='flex items-center gap-3'>
+                                <span><IoCallOutline /> </span>
+                                <Link href={"tel:+971553472035"}>+971553472035</Link>
                             </div>
                         </div>
                         <div className='flex gap-4 text-xl'>
@@ -113,9 +108,9 @@ export default function ContactHeroSection() {
 
                                 <input
                                     type='text'
-                                    name='name'
+                                    name='username'
                                     placeholder='Your name'
-                                    value={formData.name}
+                                    value={formData.username}
                                     onChange={handleChange}
                                     className='w-full p-2 outline-0 border-b-2 border-gray-500 focus:border-[#E32B6B]'
                                 />

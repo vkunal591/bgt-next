@@ -6,14 +6,16 @@ import Faqs from '../components/common/Faqs'
 import TrustedPartners from '../components/common/TruestedPartners'
 import ContactUs from '../components/ContactUs'
 import Image from 'next/image'
+import { getBanners } from '@/utils/server'
 
-export default function page() {
+const page = async () => {
+    const { data } = await getBanners('/about-us') // Placeholder for actual data fetching
     return (
-        <div className='bg-gray-100'>
+        <div className="bg-gray-100">
             <HeroSection
-                title="About Us"
-                description="BGT Ventures General Trading LLC is a distinguished distributor of cutting-edge security surveillance equipment, IT hardware, and video telematics solutions"
-                bgImage="/assets/images/banners/about.jpg"
+                title={data?.title ?? "Unleash Innovation"}
+                description={data?.description ?? "Tailored software solutions for every business need."}
+                bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
                 alignment="left"
                 position="center-left"
 
@@ -66,13 +68,13 @@ export default function page() {
                             Don’t worry about any thing, our security experts will install your new system, activate it, and show you how to use it.
                         </p>
                     </div>
-                    <div className='realative'>
+                    <div className='realative '>
                         <Image
                             src="/assets/images/content/camera.png"
                             alt="Client Background"
                             width={500}
                             height={500}
-                            className="object-cover w-full h-full scale-150 rounded-none"
+                            className="object-cover w-full h-full rounded-none"
                         />
                     </div>
                 </div>
@@ -86,6 +88,7 @@ export default function page() {
 
 
             <Faqs
+                pageUrl='/about-us'
                 sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
                 headingProps={{
                     title: "Most Asked Question",
@@ -118,3 +121,6 @@ export default function page() {
         </div>
     )
 }
+
+
+export default page;

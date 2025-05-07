@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HeroSection from "./components/common/HeroSection";
-import { getBanners } from "@/utils/server";
+import { getBanners, getBlogData } from "@/utils/server";
 import InfoImageSection from "./components/common/InfoImageSection";
 import SectionWithCards from "./components/common/SectionWithCards";
 import DiscoverSection from "./components/DiscoverSection";
@@ -49,19 +49,21 @@ const cardsData = [
 
 
 
-export default function Home() {
-  // const { data } = getBanners('/home') // Placeholder for actual data fetching
-  // console.log(data)
+
+
+const Home = async () => {
+  const { data } = await getBanners('/home') // Placeholder for actual data fetching
+  const blogData = await getBlogData() // Placeholder for actual data fetching
   return (
     <div className="bg-gray-100">
       <HeroSection
-        title="Unleash Innovation"
-        description="Tailored software solutions for every business need."
-        bgImage="/assets/images/banners/bannerhome.png"
+        title={data?.title ?? "Unleash Innovation"}
+        description={data?.description ?? "Tailored software solutions for every business need."}
+        bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
         alignment="center"
         position="top-center"
         buttonText="Explore More"
-        buttonLink="/about"
+        buttonLink={data?.link ?? "/about-us"}
       />
 
 
@@ -104,7 +106,7 @@ export default function Home() {
             description:
               "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
             buttonText: "Learn More",
-            buttonLink: "/services/security",
+            buttonLink: "/about-us",
 
 
           },
@@ -116,7 +118,7 @@ export default function Home() {
             description:
               "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
             buttonText: "Explore",
-            buttonLink: "/services/hardware",
+            buttonLink: "/",
 
           },
           {
@@ -127,7 +129,7 @@ export default function Home() {
             description:
               "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
             buttonText: "Discover",
-            buttonLink: "/services/telematics",
+            buttonLink: "/",
 
           },
         ]}
@@ -163,36 +165,34 @@ export default function Home() {
         cards={[
           {
             id: 1,
-            image: "/assets/images/banners/banner1.jpg",
-            subtitle: "Surveillance",
+            image: "/assets/images/content/security.png",
             title: "Security Products",
             description:
               "It is a long established fact that a reader will be distracted by the readable content.",
             buttonText: "Learn More",
-            buttonLink: "/services/security",
+            buttonLink: "/security-products",
 
 
           },
           {
             id: 2,
-            image: "/assets/images/banners/banner1.jpg",
-            subtitle: "Hardware",
+            image: "/assets/images/content/itproduct.png",
+
             title: "IT Products",
             description:
               "It is a long established fact that a reader will be distracted by the readable content.",
             buttonText: "Explore",
-            buttonLink: "/services/hardware",
+            buttonLink: "/it-products",
 
           },
           {
             id: 3,
-            image: "/assets/images/banners/banner1.jpg",
-            subtitle: "Telematics",
+            image: "/assets/images/content/elv.png",
             title: "ELV Services",
             description:
               "It is a long established fact that a reader will be distracted by the readable content.",
             buttonText: "Discover",
-            buttonLink: "/services/telematics",
+            buttonLink: "/elv-services",
 
           },
         ]}
@@ -236,14 +236,14 @@ export default function Home() {
           title: "What’s Latest at BGT",
           align: "left",
           buttonText: "See All",
-          buttonLink: "/all-cards",
+          buttonLink: "/elv-services",
           layout: "w-full",
           buttonVariant: "outline",
           buttonColor: "bg-white",
           buttonTextColor: "text-white",
 
         }}
-        cards={cardsData}
+        cards={blogData}
         cardClass="p-0  bg-transparent rounded-none shadow-none"
         imageClass="rounded-none mb-0 w-full h-48 object-cover"
         cardContetntClass="py-4 rounded-none shadow-none bg-transparent"
@@ -262,7 +262,7 @@ export default function Home() {
         title="IP Camera Active"
         description="Real-time video feed is recorded and stored securely."
         buttonText="Explore More"
-        buttonLink="/shop"
+        buttonLink="/it-products"
         imageSrc="/assets/images/banners/banner5.png"
         contentPosition="center-right"
         subTitleClass='text-4xl text-white font-bold tracking-wide'
@@ -274,6 +274,7 @@ export default function Home() {
         className='mb-20 h-full min-h-[500px] bg-transparent !py-0'
       />
       <Faqs
+        pageUrl="/home"
         sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
         headingProps={{
           title: "We are trusted By",
@@ -311,3 +312,7 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+export default Home

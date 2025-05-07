@@ -7,7 +7,7 @@ export const getData = async (url: string) => {
       throw new Error("Failed to fetch section data");
     }
     const res = await response.json();
-    return res.data.result;
+    return res.data;
   } catch (error) {
     console.log("Error fetching section data:", error);
     return null;
@@ -28,12 +28,12 @@ export const getFaqs = async () => {
 };
 
 export const getBanners = async (slug: any) => {
-  const bannerData: any = await getData(`/api/banner?slug=${slug}`);
-  return { data: bannerData };
+  const bannerData: any = await getData(`/api/banner/public?slug=${slug}`);
+  return { data: bannerData[0] };
 };
 
 export const getBlogData = async () => {
-  const blogPageData: any[] = await getData("/api/blog");
+  const blogPageData: any[] = await getData("/api/blog/public");
   return {
     data: blogPageData,
   };

@@ -36,6 +36,7 @@ export default function page() {
             />
 
             <Faqs
+                pageUrl='/contact-us'
                 sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
                 headingProps={{
                     title: "We are trusted By",
