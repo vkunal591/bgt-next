@@ -277,7 +277,7 @@ const Home = async () => {
         pageUrl="/home"
         sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
         headingProps={{
-          title: "We are trusted By",
+          title: "Most Asked Question",
           description: "In addition to our comprehensive product distribution, BGT Ventures offers a range of professional services to support security and IT infrastructure. We provide SIRA approvals for compliance with regulatory requirements, as well as Etisalat and DU approvals for seamless telecommunications integration. Our expertise extends to ",
           align: "left",
           layout: "w-full",
@@ -290,7 +290,7 @@ const Home = async () => {
 
       <TrustedPartners sectionPadding="py-4 lg:py-16"
         headingProps={{
-          title: "Most Asked Question",
+          title: "We are trusted By",
           description: "In addition to our comprehensive product distribution, BGT Ventures offers a range of professional services to support security and IT infrastructure. We provide SIRA approvals for compliance with regulatory requirements, as well as Etisalat and DU approvals for seamless telecommunications integration. Our expertise extends to ",
           align: "left",
           layout: "w-full",
@@ -298,7 +298,8 @@ const Home = async () => {
           buttonColor: "bg-white",
           buttonTextColor: "text-white",
 
-        }} />
+        }}
+        />
 
       <FeatrurePoints
         sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
@@ -316,3 +317,5 @@ const Home = async () => {
 
 
 export default Home
+
+export const revalidate = 60;
