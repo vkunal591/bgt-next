@@ -51,7 +51,7 @@ const Navbar = () => {
   const handleLinkClick = () => setActiveSubmenuId(null);
 
   return (
-    <nav className={` bg-white shadow border-b  flex justify-between p-4 lg:px-10 lg:py-6  items-center lg:h-auto  top-0 z-[100] w-full `}>
+    <nav className={`${!scrolled ? "bg-black/50" : "bg-white  shadow"} fixed  shadow shadow-white/20  flex justify-between p-4 lg:px-10 lg:py-6  items-center lg:h-auto  top-0 z-[100] w-full `}>
     {/* ${!scrolled ? "bg-transparent" : "bg-white shadow"} */}
       <div>
         <Link href={"/"}>
@@ -77,9 +77,9 @@ const Navbar = () => {
           >
             <Link href={item.path} className="border-none outline-none hover:text-blue-800">
               <li
-                className={` text-sm  hover:scale-105 ${pathname === item.path
+                className={` text-base  hover:scale-105 ${!scrolled && "text-white"} ${pathname === item.path
                   ? "border-b-2 border-color-primary text-primary font-bold"
-                  : "text-dark-primary  transition-all duration-300"
+                  : "font-medium  transition-all duration-300"
                   } `}
               // onClick={(e) => {
               //   item?.submenu && e.preventDefault(); // Prevent link navigation to enable click behavior
