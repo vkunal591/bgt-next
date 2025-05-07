@@ -86,7 +86,6 @@ const page = async () => {
                 title={data?.title ?? "Unleash Innovation"}
                 description={data?.description ?? "Tailored software solutions for every business need."}
                 bgImage={data?.fileUrl ?? "/assets/images/banners/bannerhome.png"}
-                titleColor='text-primary !text-6xl'
                 alignment="center"
                 position="center"
             />
