@@ -49,7 +49,7 @@ const Page = () => {
     // if (!product) return <div>Product not found</div>;
 
     return (
-        <div className='bg-gray-100'>
+        <div className='bg-gray-100 lg:pt-20'>
 
             <ProductView
                 product={{
@@ -228,5 +228,3 @@ const Page = () => {
 
 export default Page;
 
-
-export const revalidate = 10;

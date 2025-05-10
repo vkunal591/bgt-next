@@ -87,7 +87,7 @@ const Page = () => {
     if (error || !blog) return <p className="max-w-7xl m-auto p-4 lg:p-16 lg:py-12 bg-gray-100">No data found.</p>;
 
     return (
-        <div className='bg-gray-100'><div className="max-w-7xl m-auto p-4 lg:p-16 lg:py-12 bg-gray-100">
+        <div className='bg-gray-100 lg:pt-20'><div className="max-w-7xl m-auto p-4 lg:p-16 lg:py-12 bg-gray-100">
             <h1 className="text-4xl text-gray-800 font-bold mb-4">{blog.title}</h1>
             <p className="text-gray-800 mb-6">{blog.heading}</p>
             <div className='w-full'>
@@ -131,5 +131,3 @@ const Page = () => {
 }
 
 export default Page;
-
-export const revalidate = 10;
