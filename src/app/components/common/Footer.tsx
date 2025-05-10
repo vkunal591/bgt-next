@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Accordion from "./FooterAccordion";
-import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
+import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { IoMailOutline, IoCallOutline, IoLocationOutline, IoArrowUp } from "react-icons/io5";
 import GoToTopButton from "./GoToTopButton";
 
@@ -62,12 +62,15 @@ export default function Footer() {
                 solutions for websites, mobile apps, and advanced technologies
                 like AI. Let's create something exceptional together!
               </p>
-              <p className="text-lg font-semibold mb-2 ">Followe Us On</p>
+              <p className="!text-lg !font-semibold mb-2 !font-[arsenal] ">Followe Us On</p>
               <p className="flex items-center gap-4 pl-1">
                 <Link href={""} title="facebook">
                   <FaFacebook className="text-2xl text-blue-600" />
                 </Link>
                 <Link href={""} title="instagram">
+                  <FaLinkedin className="text-2xl text-blue-800 " />
+                </Link>
+                  <Link href={""} title="instagram">
                   <FaInstagramSquare className="text-2xl text-pink-500" />
                 </Link>
               </p>
@@ -82,7 +85,7 @@ export default function Footer() {
               {company &&
                 company?.map((item, index) => (
                   <li key={index}>
-                    <Link href={item.url} className="hover:text-gray-600 font-[arsenal]">
+                    <Link href={item.url} className="hover:text-gray-600 font-[ubuntu]">
                       {item.name}
                     </Link>
                   </li>
@@ -97,7 +100,7 @@ export default function Footer() {
               {services &&
                 services?.map((item, index) => (
                   <li key={index}>
-                    <Link href={item.url} className="hover:text-gray-600 font-[arsenal]">
+                    <Link href={item.url} className="hover:text-gray-600 font-[ubuntu]">
                       {item.name}
                     </Link>
                   </li>
@@ -121,14 +124,14 @@ export default function Footer() {
             </ul>
           </div> */}
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 ">
             <h3 className="mb-5 text-lg  text-primary font-medium">
               Contact Us
             </h3>
-            <div>
+            <div className="!font-[ubuntu]">
               <Link
                 href={"mailto:admin@bgtgulf.com"}
-                className="text-sm mb-2 flex items-center"
+                className="text-sm mb-2 flex items-center "
               >
                 <strong>
                   <IoMailOutline className="text-xl mr-2" />

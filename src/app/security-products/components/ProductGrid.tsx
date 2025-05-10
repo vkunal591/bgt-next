@@ -32,7 +32,7 @@ export default function ProductGrid({ slug, layoutClass }: { slug: any, layoutCl
     const isEmpty = !loading && productData.length === 0;
 
     return (
-        <div className={layoutClass || 'max-w-7xl m-auto p-4 lg:p-16'}>
+        <div className={layoutClass || 'max-w-7xl m-auto p-4 lg:p-16 lg:py-12'}>
             {loading ? (
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                     {Array.from({ length: 8 }).map((_, index) => (
@@ -60,7 +60,7 @@ export default function ProductGrid({ slug, layoutClass }: { slug: any, layoutCl
                                         className='w-full h-48 object-cover rounded'
                                     />
                                 </div>
-                                <h3 className='text-xl font-semibold p-2 text-gray-800 text-center'>
+                                <h3 className='text-xl line-clamp-1 font-semibold p-2 text-gray-800 text-center'>
                                     {product?.name || 'BGT Product'}
                                 </h3>
                             </div>

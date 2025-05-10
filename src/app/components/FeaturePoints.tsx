@@ -25,7 +25,7 @@ const statsData = [
 ];
 
 const FeatrurePoints: React.FC<FeatrurePointsProps> = ({
-    sectionPadding = "p-4 lg:p-16",
+    sectionPadding = "p-4 lg:p-16 lg:py-12",
 }) => {
     return (
         <section className={`relative w-full ${sectionPadding} text-gray-800`}>
@@ -46,12 +46,12 @@ const FeatrurePoints: React.FC<FeatrurePointsProps> = ({
                 {statsData.map((feature, index) => (
                     <div
                         key={index}
-                        className="p-4 text-center backdrop-blur-sm  rounded-lg text-gray-800"
+                        className="p-4 text-center backdrop-blur-sm  rounded-lg text-gray-600"
                     >
-                        <h5 className="text-4xl font-semibold flex justify-center items-center font-[arsenal]">
+                        <h5 className="text-5xl font-semibold flex justify-center items-center font-[arsenal]">
                             {feature.value}
                         </h5>
-                        <p className="mt-2 text-lg font-semibold">{feature.label}</p>
+                        <p className="mt-2 !text-lg !font-semibold">{feature.label}</p>
                     </div>
                 ))}
             </div>

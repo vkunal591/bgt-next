@@ -152,7 +152,7 @@ const page = async () => {
 
 
             <HeadingContent layout='mb-4 max-w-7xl m-auto p-4 lg:px-16' title='ELV Category ' description='BGT Ventures General Trading LLC is a distinguished distributor of cutting-edge security surveillance equipment, IT hardware, and video telematics solutions, catering to Dubai and the broader MENA region. Since our inception in 2011, we have been committed to supplying premium-quality products that enhance security, optimize efficiency, and elevate operational performance for businesses and high-security sectors. Our deep industry expertise and unwavering commitment to technological innovation position us as a trusted partner for resellers, integrators, and enterprises seeking state-of-the-art security and IT solutions.' />
-            <ProductGrid slug={"ELV Services"} layoutClass={"max-w-7xl m-auto p-4 pt-0 lg:p-16 lg:pt-0"} />
+            <ProductGrid slug={"ELV Services"} layoutClass={"max-w-7xl m-auto p-4 pt-0 lg:p-16 lg:py-12 lg:pt-0"} />
 
 
             <InfoBannerSection
@@ -170,10 +170,11 @@ const page = async () => {
                 buttonTextColor="text-black"
                 overlayLayer='bg-black/10'
                 className='mb-20 h-full min-h-[500px] bg-transparent !py-0'
+                descClass='text-gray-100'
             />
             <Faqs
                 pageUrl='/elv-services'
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
                 headingProps={{
                     title: "We are trusted By",
                     description: "In addition to our comprehensive product distribution, BGT Ventures offers a range of professional services to support security and IT infrastructure. We provide SIRA approvals for compliance with regulatory requirements, as well as Etisalat and DU approvals for seamless telecommunications integration. Our expertise extends to ",
@@ -199,12 +200,12 @@ const page = async () => {
                 }} />
 
             <FeatrurePoints
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
             />
 
 
             <ContactUs
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
             />
 
         </div>
@@ -215,4 +216,4 @@ const page = async () => {
 
 export default page;
 
-export const revalidate = 60;
+export const revalidate = 10;

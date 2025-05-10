@@ -11,7 +11,7 @@ interface SectionWithCardsProps {
 const DiscoverSection: React.FC<SectionWithCardsProps> = ({
     headingProps }) => {
     return (
-        <div className="max-w-7xl mx-auto p-4 lg:p-16">
+        <div className="max-w-7xl mx-auto p-4 lg:p-16 lg:py-12">
             <HeadingContent {...headingProps} />
             <InfoBannerSection
                 subtitle="Your Identity"
@@ -21,7 +21,7 @@ const DiscoverSection: React.FC<SectionWithCardsProps> = ({
                 buttonLink="/elv-services"
                 imageSrc="/assets/images/banners/banner2.png"
                 contentPosition="center-right"
-                subTitleClass='text-white lg:text-gray-800 text-5xl font-bold tracking-wide'
+                subTitleClass='text-white lg:text-gray-700 text-5xl font-bold tracking-wide'
                 titleColor="text-white lg:text-gray-800 text-3xl font-medium"
                 textColor="text-white lg:text-gray-800"
                 buttonColor="bg-prunary"

@@ -40,7 +40,7 @@ const InfoImageSection: React.FC<InfoImageSectionProps> = ({
     const isReversed = layout === 'row-reverse';
 
     return (
-        <div className={`w-full p-4 lg:p-16 max-w-7xl m-auto ${bgColor} ${textColor} ${className}`}>
+        <div className={`w-full p-4 lg:p-16 lg:py-12 max-w-7xl m-auto ${bgColor} ${textColor} ${className}`}>
             <div className={`max-w-7xl mx-auto flex  ${layout} items-center gap-8`}>
                 {/* Text Box */}
                 <div className="flex-1 space-y-4">

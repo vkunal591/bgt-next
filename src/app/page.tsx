@@ -134,7 +134,7 @@ const Home = async () => {
           },
         ]}
         gridClass="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+        sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
         gap="gap-10"
         cardClass="p-0  bg-transparent rounded-none shadow-none"
         imageClass="rounded-none mb-0 w-full h-48 object-cover"
@@ -197,7 +197,7 @@ const Home = async () => {
           },
         ]}
         gridClass="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto "
+        sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto "
         gap="gap-10"
         cardClass="p-0  bg-transparent rounded-none shadow-none"
         imageClass="rounded-none mb-0 w-full h-48 object-cover"
@@ -231,7 +231,7 @@ const Home = async () => {
 
 
       <SectionWithCardsSlider
-        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+        sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
         headingProps={{
           title: "What’s Latest at BGT",
           align: "left",
@@ -272,10 +272,11 @@ const Home = async () => {
         buttonTextColor="text-black"
         overlayLayer='bg-black/10'
         className='mb-20 h-full min-h-[500px] bg-transparent !py-0'
+        descClass="text-gray-100"
       />
       <Faqs
         pageUrl="/home"
-        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+        sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
         headingProps={{
           title: "Most Asked Question",
           description: "In addition to our comprehensive product distribution, BGT Ventures offers a range of professional services to support security and IT infrastructure. We provide SIRA approvals for compliance with regulatory requirements, as well as Etisalat and DU approvals for seamless telecommunications integration. Our expertise extends to ",
@@ -302,12 +303,12 @@ const Home = async () => {
         />
 
       <FeatrurePoints
-        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+        sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
       />
 
 
       <ContactUs
-        sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+        sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
       />
 
     </div>
@@ -318,4 +319,4 @@ const Home = async () => {
 
 export default Home
 
-export const revalidate = 60;
+export const revalidate = 10;

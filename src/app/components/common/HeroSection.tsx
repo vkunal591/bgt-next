@@ -45,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   buttonLink = "#",
 }) => {
   return (
-    <section className="relative w-full h-[50vh] lg:h-screen 2xl:h-96 overflow-hidden">
+    <section className="relative w-full h-[50vh] lg:h-screen 2xl:h-screen overflow-hidden">
       {/* Next.js Optimized Background Image */}
       <Image
         src={bgImage}

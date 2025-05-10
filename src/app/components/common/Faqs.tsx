@@ -13,7 +13,7 @@ interface FaqsProps {
 
 const Faqs: React.FC<FaqsProps> = ({
     headingProps,
-    sectionPadding = "p-4 lg:p-16",
+    sectionPadding = "p-4 lg:p-16 lg:py-12",
     pageUrl,
 }) => {
     const [faqData, setFaqData] = useState<any>([]);

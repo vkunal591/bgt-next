@@ -71,7 +71,7 @@ const DownloadCard = ({ item }: { item: DownloadItem }) => (
 
 export default function SupportDownloads() {
   return (
-    <div className="max-w-7xl m-auto p-4 lg:p-16">
+    <div className="max-w-7xl m-auto p-4 lg:p-16 lg:py-12">
       <HeadingContent
         layout="mb-4"
         align="center"

@@ -65,7 +65,7 @@ export default function ContactHeroSection() {
 
     return (
         <div className='bg-primary text-white'>
-            <div className='max-w-7xl m-auto p-4 lg:p-16'>
+            <div className='max-w-7xl m-auto p-4 lg:p-16 lg:py-12'>
                 <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-20'>
                     {/* Left Content Section */}
                     <div className='lg:w-1/2 lg:pr-20  flex flex-col items-start min-h-96'>

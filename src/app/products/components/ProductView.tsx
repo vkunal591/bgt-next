@@ -32,7 +32,7 @@ const ProductView: React.FC<ProductViewProps> = ({ product, loading = false }) =
   };
 
   return (
-    <div className='flex flex-col lg:flex-row gap-4 mb-20 max-w-7xl m-auto p-4 lg:p-16'>
+    <div className='flex flex-col lg:flex-row gap-4 mb-20 max-w-7xl m-auto p-4 lg:p-16 lg:py-12'>
       <div className='w-full lg:w-2/5 flex gap-4'>
         {/* Thumbnails */}
         <div className='flex flex-col items-center justify-center h-80 w-1/4 relative overflow-y-auto scrollbar-hidden'>

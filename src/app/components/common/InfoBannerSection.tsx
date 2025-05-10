@@ -19,6 +19,7 @@ interface InfoBannerSectionProps {
     className?: string;
     contentPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center' | 'center-left' | 'center-right' | 'bottom-center' | 'top-center';
     overlayLayer?: string;
+    descClass?:string
 }
 
 const positionMap: Record<string, string> = {
@@ -51,6 +52,7 @@ const InfoBannerSection: React.FC<InfoBannerSectionProps> = ({
     className = '',
     contentPosition = 'center',
     overlayLayer = 'bg-black/10',
+    descClass
 }) => {
     const positionClasses = positionMap[contentPosition] || 'items-center justify-center';
 
@@ -68,9 +70,9 @@ const InfoBannerSection: React.FC<InfoBannerSectionProps> = ({
             <div className={`flex flex-col p-6 md:p-12 w-full h-full absolute top-0 left-0 ${positionClasses} text-left z-10`}>
                 <div className={`${contentClass}`}>
                     <div>
-                        <p className={`text-gray-800 ${subTitleClass || "text-sm font-medium uppercase tracking-wide"} `}>{subtitle}</p>
-                        <h2 className={`text-3xl md:text-4xl font-bold text-gray-100 ${titleColor}`}>{title}</h2>
-                        <p className="text-base md:text-lg text-gray-100">{description}</p>
+                        <h4 className={`text-gray-800 ${subTitleClass || "text-3xl font-medium uppercase tracking-wide"} `}>{subtitle}</h4>
+                        <h2 className={`text-3xl md:text-4xl font-bold text-gray-800 ${titleColor}`}>{title}</h2>
+                        <p className={`text-base md:text-lg ${descClass || "text-gray-800"}`}>{description}</p>
                     </div>
                     <Button
                         variant="outline"

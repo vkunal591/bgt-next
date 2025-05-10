@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   variant = "filled",
 }) => {
   const baseClasses =
-    "inline-block font-semibold py-2 px-5 rounded-3xl shadow-md transition duration-300 ease-in-out";
+    "inline-block font-medium py-2 px-5 rounded-3xl shadow-md transition duration-300 ease-in-out";
 
   const filledClasses =
     "bg-primary text-white hover:bg-primary/90";

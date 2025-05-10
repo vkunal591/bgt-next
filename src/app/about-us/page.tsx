@@ -38,11 +38,11 @@ const page = async () => {
 
 
             <FeatrurePoints
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
             />
 
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl m-auto p-4 lg:p-16'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl m-auto p-4 lg:p-16 lg:py-12'>
                 <div>
                     <h3 className="text-3xl font-semibold mb-4 text-primary" >Our Mission</h3>
                     <p className='font-normal font-[ubuntu] text-dark-primary'>
@@ -58,7 +58,7 @@ const page = async () => {
             </div>
 
             <div className='bg-gray-900'>
-                <div className='max-w-7xl m-auto p-4 lg:p-16 flex flex-col md:flex-row gap-4 items-center justify-between'>
+                <div className='max-w-7xl m-auto p-4 lg:p-16 lg:py-12 flex flex-col md:flex-row gap-4 items-center justify-between'>
                     <div className='text-gray-50 w-full lg:w-3/4'>
                         <h3 className="text-3xl font-semibold mb-4 text-primary w-full lg:w-2/3" >From Door And Window Sensors To Mobile Apps And Cameras System!</h3>
                         <p className='font-normal font-[ubuntu]'>
@@ -89,7 +89,7 @@ const page = async () => {
 
             <Faqs
                 pageUrl='/about-us'
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
                 headingProps={{
                     title: "Most Asked Question",
                     description: "In addition to our comprehensive product distribution, BGT Ventures offers a range of professional services to support security and IT infrastructure. We provide SIRA approvals for compliance with regulatory requirements, as well as Etisalat and DU approvals for seamless telecommunications integration. Our expertise extends to ",
@@ -115,7 +115,7 @@ const page = async () => {
                 }} />
 
             <ContactUs
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
             />
 
         </div>
@@ -125,4 +125,4 @@ const page = async () => {
 
 export default page;
 
-export const revalidate = 60;
+export const revalidate = 10;

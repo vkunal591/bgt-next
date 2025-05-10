@@ -17,7 +17,7 @@ const page = async () => {
             />
 
             <SectionWithCardsSlider
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
                 headingProps={{
                     title: "What’s Latest at BGT",
                     align: "left",
@@ -49,4 +49,4 @@ const page = async () => {
 
 export default page;
 
-export const revalidate = 60;
+export const revalidate = 10;

@@ -74,7 +74,7 @@ export default function ContactForm() {
 
     return (
         <div className='bg-primary text-white'>
-            <div className='max-w-7xl m-auto p-4 lg:p-16'>
+            <div className='max-w-7xl m-auto p-4 lg:p-16 lg:py-12'>
                 <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-16'>
                     {/* Left Content Section */}
                     <div className='lg:w-1/2 space-y-6 flex flex-col justify-between items-start min-h-96'>

@@ -7,7 +7,7 @@ interface ContactUsProps {
 }
 
 const ContactUs: React.FC<ContactUsProps> = ({
-    sectionPadding = "p-4 lg:p-16",
+    sectionPadding = "p-4 lg:p-16 lg:py-12",
 }) => {
     return (
         <section className={`relative w-full ${sectionPadding} text-white`}>

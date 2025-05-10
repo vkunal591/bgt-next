@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function OurLocation() {
     return (
-        <div className='max-w-7xl m-auto p-4 lg:p-16'>
+        <div className='max-w-7xl m-auto p-4 lg:p-16 lg:py-12'>
             <div className='flex flex-col lg:flex-row items-center justify-center gap-10'>
                 <div className='w-full lg:w-1/2 p-4'>
                     {/* location iframe */}

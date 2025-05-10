@@ -43,7 +43,7 @@ export default function ProductFilter() {
         : products;
 
     return (
-        <div className='max-w-7xl m-auto p-4 lg:p-16'>
+        <div className='max-w-7xl m-auto p-4 lg:p-16 lg:py-12'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
                 {/* Category List */}
                 <div className='space-y-2 border border-gray-200 rounded overflow-hidden'>

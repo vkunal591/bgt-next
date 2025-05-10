@@ -109,7 +109,7 @@ const page = async () => {
 
             <Faqs
                 pageUrl='/support'
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
                 headingProps={{
                     title: "We are trusted By",
                     description: "In addition to our comprehensive product distribution, BGT Ventures offers a range of professional services to support security and IT infrastructure. We provide SIRA approvals for compliance with regulatory requirements, as well as Etisalat and DU approvals for seamless telecommunications integration. Our expertise extends to ",
@@ -135,12 +135,12 @@ const page = async () => {
                 }} />
 
             <FeatrurePoints
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
             />
 
 
             <ContactUs
-                sectionPadding="p-4 lg:p-16 max-w-7xl m-auto"
+                sectionPadding="p-4 lg:p-16 lg:py-12 max-w-7xl m-auto"
             />
 
         </div>
@@ -149,4 +149,4 @@ const page = async () => {
 
 export default page;
 
-export const revalidate = 60;
+export const revalidate = 10;

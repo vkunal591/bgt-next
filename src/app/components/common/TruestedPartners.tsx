@@ -27,7 +27,7 @@ const TrustedPartners: React.FC<FaqsProps> = ({
 }) => {
     return (
         <section className={`w-full ${sectionPadding}`}>
-            <div className="max-w-7xl m-auto p-4 lg:p-16">
+            <div className="max-w-7xl m-auto p-4 lg:p-16 lg:py-12">
                 <HeadingContent {...headingProps} />
             </div>
 
