@@ -8,7 +8,7 @@ export default function OurLocation() {
                     {/* location iframe */}
                     <div className='rounded overflow-hidden '>
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9510630722!2d76.76355598950211!3d28.644287345822324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1746534494866!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.3381281825154!2d55.282610375819644!3d25.259208577671174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4314b3345cd9%3A0xc8a37d29cce0a087!2sBGT%20Ventures%20LLC%20(SIRA%20Approved)!5e0!3m2!1sen!2sae!4v1747658949662!5m2!1sen!2sae" width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div className='w-full lg:w-1/2'>

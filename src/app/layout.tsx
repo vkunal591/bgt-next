@@ -3,6 +3,7 @@ import { Arsenal, Ubuntu } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
+import GoToTopButton from "./components/common/GoToTopButton";
 
 const ubuntu = Ubuntu({
   variable: "--font-ubuntu",
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <GoToTopButton />
         <Footer />
       </body>
     </html>
